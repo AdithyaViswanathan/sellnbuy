@@ -1,0 +1,11 @@
+const app = require('../app');
+require('dotenv/config');
+
+const port = process.env.PORT || 8000;
+
+require('../db');
+
+app.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.info(`Server started at ${port}`);
+});
